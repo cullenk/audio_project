@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bd7979dd23.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>My Audio Controller</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="audio-controllers-container">
+            <div class="audio-controller">
+                <audio src="https://webflow-audio.s3.us-east-2.amazonaws.com/Piano.mp3" preload="metadata" loop></audio>
+                <div class="tracks-container">
+                    <div class="volume-track">
+                        <input class="seek-slider-volume" type="range" min="0" max="100" value="50" step="1" oninput="adjustVolume(event)" onchange="createStorage(event)"> 
+                    </div>
+                    <div class="narration-buttons-div">
+                        <button class="restart-btn" onclick="restartAudio(event)"><i class="fas fa-undo"></i></button>     
+                    </div>
+                </div>
+            </div>
+            <div class="audio-controller">
+                <audio src="https://webflow-audio.s3.us-east-2.amazonaws.com/NepalChant.mp3" preload="metadata" loop></audio>
+                <div class="tracks-container">
+                    <div class="volume-track">
+                        <input class="seek-slider-volume" type="range" min="0" max="100" value="50" step="1" oninput="adjustVolume(event)" onchange="createStorage(event)"> 
+                    </div>
+                    <div class="narration-buttons-div">
+                        <button class="restart-btn" onclick="restartAudio(event)"><i class="fas fa-undo"></i></button>     
+                    </div>
+                </div>
+            </div>
+            <div class="audio-controller">
+                <audio src="https://webflow-audio.s3.us-east-2.amazonaws.com/Love+Song+(Never+Letting+Go).wav" preload="metadata" loop></audio>
+                <div class="tracks-container">
+                    <div class="volume-track">
+                        <input class="seek-slider-volume" type="range" min="0" max="100" value="50" step="1" oninput="adjustVolume(event)" onchange="createStorage(event)"> 
+                    </div>
+                    <div class="narration-buttons-div">
+                        <button class="restart-btn" onclick="restartAudio(event)"><i class="fas fa-undo"></i></button>     
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="master-controls-div">
+            <button class="play-btn"><img src="playpause.png"></button>
+            <button class="timer"><i class="fas fa-stopwatch"></i></button>
+            <div class="timer-container"></div>
+        </div>        
+        <button onclick="clearStorage()">Clear Storage</button>
+        <div id="audio-levels"></div>
+    </div>
+
+    <!-- Canvas Section -->
+    <h2>Canvas</h2>
+
+    <div class="icon-container">
+        <div class="icon-div">
+            <img src="bird.svg" alt="" class="hero-icon">
+        </div>
+        <div class="icon-div">
+            <img src="forest.svg" alt="" class="hero-icon">
+        </div>
+        <div class="icon-div">
+            <img src="narration-icon.svg" alt="" class="hero-icon">
+        </div>
+        <div class="icon-div">
+            <img src="white-noise.svg" alt="" class="hero-icon">
+        </div>
+    </div>
+
+
+    <canvas id="stage"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>

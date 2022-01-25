@@ -1,0 +1,98 @@
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --sliderImage: url('forest.png');
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.audio-controller {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+.audio-controllers-container {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    cursor: pointer;
+}
+
+.narration-buttons-div {
+    display: flex;
+    justify-content: end;
+    padding: 10px 0;
+}
+
+.master-controls-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    margin-right: 15px;
+    width: 200px;
+    height: 7px;
+    background: red;
+    border-radius: 5px;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: var(--sliderImage);
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    box-shadow: 0 0 2px 0 #555;
+  }
+
+  input[type=range]::-webkit-slider-runnable-track  {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+
+  #audio-levels {
+      background: skyblue;
+      min-width: 300px;
+      min-height: 300px;
+  }
+
+  .target {
+      height: 50px;
+      width: 50px;
+      background: green;
+  }
+
+.label input:checked ~ .target {
+    background: blue;
+}
+
+/* Canvas Bubbles */
+
+.icon-container {
+    display: flex;
+}
+
+.hero-icon {
+    width: 50px;
+    height: 50px;
+}
